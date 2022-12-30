@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: '/login'
+  },
+  {
     path: 'cms',
     loadChildren: ()=>import('./cms/cms.module').then(module=>module.CmsModule)
   },
